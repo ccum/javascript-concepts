@@ -1,13 +1,7 @@
-// crear variables con var
-var aprendiendo = 'JavaScript'
-console.log(aprendiendo)
+let musica = "Rock"
 
-//crear variables con const
-
-const aprendiendo1='Cambios'
-
-//crear variables con let
-
-let aprendiendo2 = "cambios2"
-aprendiendo2="tres"
-console.log(aprendiendo2)
+if(musica){
+    let musica = "test"
+    console.log('dentro del bloque: ', musica )
+}
+console.log('fuera del if', musica)

@@ -1,7 +1,13 @@
-let musica = "Rock"
+const nombre = "Cesar"
+const trabajo = "Desarrollador"
+console.log(`Nombre: ${nombre}, Trabajo: ${trabajo}`)
 
-if(musica){
-    let musica = "test"
-    console.log('dentro del bloque: ', musica )
-}
-console.log('fuera del if', musica)
+
+const contenedorApp = document.querySelector("#app");
+let html = `
+    <ul>
+        <li>${nombre}</li>
+        <li>${trabajo}</li>
+    <ul>
+`;
+contenedorApp.innerHTML=html;

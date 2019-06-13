@@ -1,17 +1,11 @@
-//parametros por defecto
+//arrow functions
 
-function actividad(nombre='WalterWhite', actividad='Enseñar Quiminca'){
-    console.log(`la persona ${nombre} realiza ${actividad}`)
+let viajando = (destino, duracion)=>{
+    return `Viajando a la cuidad ${destino} por ${duracion}`
 }
+let viajando2 = destino=>`Viajando a la cuidad ${destino}`
 
-actividad('Cesar','developer');
-actividad('Pedro','developer');
-
-
-const another_actividad = function(nombre='WalterWhite', actividad='Enseñar Quiminca'){
-    console.log(`la persona ${nombre} realiza ${actividad}`)
-}
-
-
-another_actividad('Cesar','developer');
-another_actividad('Pedro','developer');
+let viaje = viajando('Paris', 9)
+let viaje2 = viajando2('Francia')
+console.log(viaje)
+console.log(viaje2)

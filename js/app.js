@@ -1,11 +1,12 @@
-//arrow functions
+//objects
+// objects literal
 
-let viajando = (destino, duracion)=>{
-    return `Viajando a la cuidad ${destino} por ${duracion}`
+const persona = {
+    nombre:'Juan',
+    pefesion: 'Developer',
+    edad: 32
 }
-let viajando2 = destino=>`Viajando a la cuidad ${destino}`
 
-let viaje = viajando('Paris', 9)
-let viaje2 = viajando2('Francia')
-console.log(viaje)
-console.log(viaje2)
+console.log(persona);
+console.log(persona.nombre);
+console.log(persona['edad']);

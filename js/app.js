@@ -1,19 +1,25 @@
-// object constructor
+// Destructuring de objetos --> extraer valores de un objeto
 
-function Tarea(nombre, urgencia){
-    this.nombre = nombre;
-    this.urgencia = urgencia;
+const aprendiendoJS={
+    version : {
+        nueva: 'ES6',
+        anterior: 'ES5'
+    },
+    frameworks: [
+        'React',
+        'VueJS',
+        'Angular'
+    ]
 }
-// Agregar prototype
-Tarea.prototype.mostrarInformacionTarea= function(){
-    return `La tarea ${this.nombre} tiene una prioridad de ${this.urgencia}`
-}
 
-//crear tarea
+// Destructuring Anterior
 
-const tarea1 = new Tarea('Aprender React', 'Urgente');
-console.log(tarea1);
-console.log(tarea1.mostrarInformacionTarea());
-const tarea2 = new Tarea('Preparar cafe', 'Urgente');
-console.log(tarea2);
-console.log(tarea2.mostrarInformacionTarea());
+console.log(aprendiendoJS)
+console.log(aprendiendoJS.version.nueva)
+
+// Destructuring Nueva
+let {version, frameworks} = aprendiendoJS;
+console.log(version)
+
+let {nueva} = aprendiendoJS.version;
+console.log(nueva)

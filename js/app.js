@@ -1,9 +1,11 @@
-// Object literal
+// Funciones en un Objeto
 
-const banda='Metálica';
-const genero='Heavy Metal';
-const canciones= ['Master of puppets','Seek & Destroy', 'Enter Sandman']
-
-const metalica = {banda,genero,canciones}
-
-console.log(metalica)
+const persona ={
+    nombre: 'Juan',
+    trabajo: 'Developer',
+    edad: 500,
+    mostrarInforme(){
+        console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`)
+    }
+}
+persona.mostrarInforme();

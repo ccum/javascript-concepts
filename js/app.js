@@ -1,25 +1,9 @@
-// Destructuring de objetos --> extraer valores de un objeto
+// Object literal
 
-const aprendiendoJS={
-    version : {
-        nueva: 'ES6',
-        anterior: 'ES5'
-    },
-    frameworks: [
-        'React',
-        'VueJS',
-        'Angular'
-    ]
-}
+const banda='Metálica';
+const genero='Heavy Metal';
+const canciones= ['Master of puppets','Seek & Destroy', 'Enter Sandman']
 
-// Destructuring Anterior
+const metalica = {banda,genero,canciones}
 
-console.log(aprendiendoJS)
-console.log(aprendiendoJS.version.nueva)
-
-// Destructuring Nueva
-let {version, frameworks} = aprendiendoJS;
-console.log(version)
-
-let {nueva} = aprendiendoJS.version;
-console.log(nueva)
+console.log(metalica)

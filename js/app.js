@@ -1,34 +1,15 @@
-// arreglos,  .map Y Objets keys
+// Spread Operator
 
-//arreglos
+let lenguajes = ['JavaScript', 'PHP', 'Python'];
+let frameworks = ['ReactJS', 'Laravel', 'Django'];
+console.log(lenguajes);
+// unir los arreglos en 1 solo
 
-const carrito = ['Producto1', 'Producto 2', 'Producto 3'];
+let combinacion = [...lenguajes,...frameworks];
+console.log(combinacion)
 
-console.log(carrito);
+// copiar arreglos 
 
-const appContenedor = document.querySelector('#app');
-let html = '';
-carrito.forEach(element => {
-    html+= `<li>${element}</li>`;
-    
-});
-
-appContenedor.innerHTML=html;
-
-//MAP
-
-carrito2 = ['Producto1', 'Producto 2', 'Producto 3'];
-carrito2.map(element=>{
-    return 'el producto es ' + element
-});
-
-
-//Objets keys
-
-const persona = {
-    nombre: 'Juan',
-    profesion: 'developer',
-    edad: 500
-}
-
-console.log(Object.keys(persona))
+let nuevoArray = [...lenguajes]
+nuevoArray.reverse();
+console.log(nuevoArray);

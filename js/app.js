@@ -1,42 +1,33 @@
-// Promises con Ajax
+// escribiendo clases
 
-const dascargarUsuarios = cantidad => new Promise((resolve, reject)=>{
-    //pasar la cantidad al api
-    const api = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
-
-    //lammado ajax
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', api, true);
-    xhr.onload=() =>{
-        if(xhr.status === 200){
-            resolve(JSON.parse(xhr.responseText).results)
-        }else{
-            reject(Error(xhr.statusText));
-        }
+class Tarea{
+    constructor(nombre, prioridad){
+        this.nombre=nombre;
+        this.prioridad=prioridad;
     }
-    xhr.onerror = (error) => reject(error);
-    xhr.send()
-});
+    mostrar(){
+        return `${this.nombre} tiene una prioridad de  ${this.prioridad}`;
+    }
 
-dascargarUsuarios(30)
-.then(
-    miembros => imprimirHTML(miembros),
-    error => console.error(
-        new Error('Hubo un error' + error)
-        )
-    )
-
-function imprimirHTML(usuarios){
-    let html = '';
-    usuarios.forEach(element => {
-        html+=`
-            <li>
-                Nombre: ${element.name.first} ${element.name.last}
-                Pais: ${element.nat}
-                Imagen: <img src=${element.picture.medium}>
-            </li>
-        `
-    });
-    const contendorApp = document.querySelector('#app');
-    contendorApp.innerHTML = html;
 }
+
+class ComprasPendientes extends Tarea{
+    constructor(nombre,prioridad,cantidad){
+        super(nombre,prioridad)
+        this.cantidad=cantidad;
+    }
+    mostrar(){
+        return super.mostrar()
+    }
+}
+
+let tarea1 = new Tarea('Aprender Javascript', 'Alta');
+let tarea2 = new Tarea('Tomar cafe', 'Media');
+let tarea3 = new Tarea('Pasear al perro', 'Baja');
+
+console.log(tarea1.mostrar());
+console.log(tarea2.mostrar());
+console.log(tarea3.mostrar());
+
+let compra1 = new ComprasPendientes('Jabon', 'Urgente', 3);
+console.log(compra1.mostrar())
